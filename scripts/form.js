@@ -8,7 +8,6 @@ function loadHandler() {
         mode.className='light';
     }
     darkBtn.addEventListener('click', btnPressed);
-    addEventListener()
 
     let nameInput = document.getElementById('name');
     nameInput.addEventListener('input', nameValidity);
