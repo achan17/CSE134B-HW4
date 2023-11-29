@@ -1,3 +1,5 @@
+let form_errors = [];
+
 function loadHandler() {
     let darkBtn = document.getElementsByClassName('press')[0]; 
     let mode = document.getElementById('mode');
@@ -72,12 +74,11 @@ function hideAlert() {
 }
 
 function commentMisinput() {
-    console.log('Change occured');
     let commentInput = document.getElementById('comments');
     let errorMsg = document.getElementById('error_comments');
+    let infoMsg = document.getElementById('info_comments');
     let errorAlert = document.getElementById('message');
-    console.log(commentInput.value);
-    let emojiRegex = /\p{Emoji}/u;
+    let emojiRegex = /\p{Extended_Pictographic}/u;
     if(emojiRegex.test(commentInput.value)){
         commentInput.className='incorrect';
         commentInput.setCustomValidity('Unfortunately emojis are not allowed in the comments sorry');
@@ -91,6 +92,12 @@ function commentMisinput() {
     else {
         commentInput.className='correct';
         errorMsg.innerText='';       
+    }
+    if(280 - commentInput.textLength <= 50){
+        infoMsg.innerText = ('You are soon reaching the character limit, characters left: ' + (280 - commentInput.textLength));
+    }
+    else {
+        infoMsg.innerText = '';
     }
 }
 

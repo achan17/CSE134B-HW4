@@ -32,7 +32,7 @@
     </header>
 
     <main>
-        <form action="https://httpbin.org/post" method="post" enctype="application/x-www-form-urlencoded">
+        <form action="https://httpbin.org/post" method="post" enctype="application/x-www-form-urlencoded" id="reach">
             <form-field class="name">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -62,7 +62,7 @@
             <br>
 
             <form-field>
-                <button type="submit">Submit</button>
+                <button id="submit" type="submit">Submit</button>
             </form-field>
         </form>
     </main>
