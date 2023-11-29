@@ -104,6 +104,40 @@ form-field > input {
     margin: auto;
 }
 
+textarea {
+    width: 50dvw;
+    margin: auto;
+    order: 2;
+}
+
+.incorrect{
+    animation: fadeOut ease 10s;
+}
+
+@keyframes fadeOut {
+    10% {
+        box-shadow: 0 0 5px 1px #FF0000;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+#message {
+    background-color: #FF0000;
+    width: 50dvw;
+    margin: auto;
+    opacity: 60%;
+    display: none;
+}
+
+.correct {
+    box-shadow: none;
+}
+
+
+
 input:invalid:required {
     box-shadow: 0 0 5px 1px #FF0000;
 }

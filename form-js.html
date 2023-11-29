@@ -36,28 +36,25 @@
             <form-field class="name">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                <output id="error"></output>
-                <output id="info"></output>
+                <output id="error_name"></output>
+                <output id="info_name"></output>
             </form-field>
             <form-field class="email">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                <output id="error"></output>
-                <output id="info"></output>
+                <output id="error_email"></output>
+                <output id="info_email"></output>
             </form-field>
             <form-field class="comments">
                 <label for="comments">Comments:</label>
-                <input 
-                    type="text" 
-                    name="comments" 
-                    minlength="8" 
-                    maxlength="280"
-                    id="comments" 
-                    required
-                    pattern="[ A-Za-z0-9_,!-@#&%=;:'\?\s\$\(\)\^\*\+\[\]\{\}\| ]{8,280}"
-                    title="8 to 280 english characters, no emojis and should allow for most characters on a keyboard except for \">
-                <output id="error"></output>
-                <output id="info"></output>
+                <p id="message"></p>
+                <textarea id="comments"
+                name="comments"
+                minlength="8"
+                maxlength="280"
+                required></textarea>
+                <output id="error_comments"></output>
+                <output id="info_comments"></output>
             </form-field>
 
             <input type="hidden" name="possible_bot" value="true">
